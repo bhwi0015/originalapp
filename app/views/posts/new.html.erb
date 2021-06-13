@@ -1,0 +1,24 @@
+
+<%= form_with model: @post, local: true do |f| %>
+
+  <div class="field">
+   <%= f.label :video %>
+   <%= f.file_field :video, :accept => 'video/*', class:"video" %>
+  </div>
+  <div class="field">
+   <%= f.label :image %>
+   <%= f.file_field :image, class:"submit-image" %>
+  </div>
+  <div class="field">
+   <%= f.label :title %>
+   <%= f.text_area :title, class:"submit-title"%>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description, class:"submit-description"%>
+   </div>
+ <div class="#">
+   <%= f.submit "作成する" ,class:"submit-video" %>
+   <%=link_to 'トップページへ戻る', root_path, class:"back-btn" %>
+ </div>
+<% end %>

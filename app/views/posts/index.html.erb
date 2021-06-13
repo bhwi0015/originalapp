@@ -1,2 +1,26 @@
-a
-<%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
+<div class="posts-main">
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
+
+
+  <% unless @posts.length == 0 %>
+  <% @posts.each do |post| %>
+  <div class="posts">
+    <div class="post-index">
+      <ul>
+        <div class="post-title"">
+          <li><%= link_to post.title, post_path(post.id) %></li>
+        </div>
+        <li><%= image_tag post.image, class:"post-image"%></li>
+        <div class="post-nickname">
+          <li><%= post.user.nickname %></li>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <% end %>
+  <% end %>
+  <div class="create-btn">
+    <i class="fas fa-video fa-4x"></i>
+    <%= link_to "動画を投稿してみよう",  new_post_path, class:"post-new" %>
+  </div>
+</div>
