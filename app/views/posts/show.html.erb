@@ -1,0 +1,11 @@
+
+<div class="show-container">
+
+<div class="viedo-show">
+<%= video_tag @post.video.to_s, :controls => true, autobuffer: true, id:"video"%>
+<div class="show-description">
+<%= @post.description %>
+</div>
+<%=link_to 'トップページへ戻る', root_path, class:"show-back-btn" %>
+</div>
+</div>
