@@ -1,10 +1,19 @@
 
-<div class="show-container">
+<div class="show-post">
 
 <div class="viedo-show">
 <%= video_tag @post.video.to_s, :controls => true, autobuffer: true, id:"video"%>
 <div class="show-description">
 <%= @post.description %>
+<%# POSTの投稿者とログインしているユーザーが同じであれば以下を表示する %>
+       <% if user_signed_in? && current_user.id == @post.user_id %>
+       <div class="post__manage">
+         <%= link_to "編集する", edit_post_path(@post.id), class:"post_btn" %>
+         <%= link_to "削除する", post_path(@post.id), method: :delete, class:"post_btn" %>
+       </div>
+       <% end %>
+     <%# // POSTの投稿者とログインしているユーザーが同じであれば上記を表示する %>
+
 </div>
 <%=link_to 'トップページへ戻る', root_path, class:"show-back-btn" %>
 </div>

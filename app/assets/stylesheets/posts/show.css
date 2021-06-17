@@ -1,6 +1,6 @@
 
-.show-container {
-  background-color: rgb(24, 27, 24);
+.show-post {
+  background-color: black;
   width: 100vw;
   height: 120vh;
   display: flex;
@@ -32,6 +32,12 @@ display: block;
   opacity: 0.9;
 }
 
-.fas {
-  color: orange;
+.post_btn {
+  background-color: #fff;
+  font-size: 15px;
+  padding: 10px;
+  color: black;
+  border-radius: 40px;
+  opacity: 0.7;
+  transition: all 0.5s;
 }

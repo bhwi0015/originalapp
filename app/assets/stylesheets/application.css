@@ -16,7 +16,7 @@
  * {
   box-sizing: border-box;
   text-decoration: none;
-    list-style: none;
+  list-style: none;
 }
 
 /* リセットCSS */
@@ -24,6 +24,8 @@ body {
   font-size: 14px;
   color: #333;
   margin: 0 auto;
+
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
 }
 h1,h2,h3,h4,h5,h6,p {
   padding: 10px 0;
