@@ -3,7 +3,6 @@
 <%= form_with model: @post, local: true do |f| %>
 
   <div class="post-field">
-   <%= f.label :video, "動画選択", class:"select-btn"%>
    <%= f.file_field :video, :accept => 'video/*', class:"hidden" %>
    <div id="upload-video"></div>
   </div>

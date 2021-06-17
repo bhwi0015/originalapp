@@ -1,5 +1,5 @@
 <div class="posts-main">
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :logout %>
 
 
   <% unless @posts.length == 0 %>
@@ -20,7 +20,6 @@
   <% end %>
   <% end %>
   <div class="create-btn">
-    <i class="fas fa-video fa-4x"></i>
     <%= link_to "動画を投稿してみよう",  new_post_path, class:"post-new" %>
   </div>
 </div>
