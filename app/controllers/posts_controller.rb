@@ -18,9 +18,14 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+    @comment = Comment.new
+    @comments = @post.comments.order(created_at: :DESC)
+  end
+
   def update
     if @post.update(post_params)
-      redirect_to post_path(@post)
+      render post_path(@post)
     else
       render :edit
     end
@@ -42,6 +47,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:video, :image, :title, :description).merge(user_id: current_user.id)
+    params.require(:post).permit(:video, :image, :title, :description, :content).merge(user_id: current_user.id)
   end
 end

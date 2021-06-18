@@ -12,9 +12,17 @@
          <%= link_to "削除する", post_path(@post.id), method: :delete, class:"post_btn" %>
        </div>
        <% end %>
-     <%# // POSTの投稿者とログインしているユーザーが同じであれば上記を表示する %>
+       <h3 class="text-left">レビューを投稿する</h3>
 
-</div>
+          <%= render partial: 'comments/form', locals: { comment: @comment, post: @post }  %>
+  <h3 class="text-left title">レビュー</h3>
+     <div class="post-comments" >
+
+             <div id="comments_area">
+                 <%= render partial: 'comments/index', locals: { comments: @comments } %>
+             </div>
+      </div>
+      </div>
 <%=link_to 'トップページへ戻る', root_path, class:"show-back-btn" %>
 </div>
 </div>
