@@ -1,8 +1,8 @@
 
 .show-post {
-  background-color: black;
+  background-color: blue;
   width: 100vw;
-  height: 120vh;
+  height: 220vh;
   display: flex;
   justify-content: center;
 }

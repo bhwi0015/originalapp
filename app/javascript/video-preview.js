@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function(){
       const blob = window.URL.createObjectURL(file);
 
       createVideoHTML(blob);
-      
+
     });
    }
 });
