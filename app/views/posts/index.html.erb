@@ -1,24 +1,12 @@
 <div class="posts-main">
+
+<div class="posts-main-list">
   <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :logout %>
 
 
-  <% unless @posts.length == 0 %>
-  <% @posts.each do |post| %>
-  <div class="posts">
-    <div class="post-index">
-      <ul>
-        <div class="post-title"">
-          <li><%= link_to post.title, post_path(post) %></li>
-        </div>
-        <li><%= image_tag post.image, class:"post-image"%></li>
-        <div class="post-nickname">
-          <li><%= post.user.nickname %></li>
-        </div>
-      </ul>
-    </div>
-  </div>
-  <% end %>
-  <% end %>
+        <div id="item_index_new">
+       <%= render 'post_new', post: @post %>
+      </div>
   <div class="create-btn">
     <%= link_to "動画を投稿してみよう",  new_post_path, class:"post-new" %>
   </div>

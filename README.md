@@ -9,9 +9,10 @@
 ### Association
 
 - has_many :posts
+- has_many :comments
+- has_many :likes
 
-## posts テーブル　
-
+## posts テーブル
 
 | Column      | Type       | Options     |
 | ----------- | ---------- | ----------- |
@@ -23,4 +24,26 @@
 
 ### Association
 
+_ has_many :comments
 - belongs_to :users
+
+## comments テーブル
+
+| Column      | Type       | Options     |
+| ----------- | ---------- | ----------- |
+| content     | string     | null: false |
+| post        | references | null: false |
+| user        | references | null: false |
+
+- belongs_to :user
+- belongs_to :post
+
+# liles テーブル
+
+| Column      | Type       | Options     |
+| ----------- | ---------- | ----------- |
+| post        | references | null: false |
+| user        | references | null: false |
+
+- belongs_to :user
+- belongs_to :post

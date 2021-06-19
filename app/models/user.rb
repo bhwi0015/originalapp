@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :posts
+  has_many :likes
   has_many :comments
 
   with_options presence: true do
@@ -12,4 +13,8 @@ class User < ApplicationRecord
   end
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX, message: 'には英字と数字の両方を含めて設定してください'
+
+  def already_liked?(post)
+    self.likes.exists?(post_id: post.id)
+  end
 end
