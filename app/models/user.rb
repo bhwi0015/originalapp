@@ -8,6 +8,25 @@ class User < ApplicationRecord
   has_many :likes
   has_many :comments
 
+  # フォロー機能のアソシエーション
+  has_many :relationships, foreign_key: 'user_id', dependent: :destroy
+  has_many :followings, through: :relationships, source: :follow
+  has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id', dependent: :destroy
+  has_many :followers, through: :reverse_of_relationships, source: :user
+
+    def follow(other_user)
+      relationships.find_or_create_by(follow_id: other_user.id) unless self == other_user
+    end
+
+    def unfollow(other_user)
+      relationship = relationships.find_by(follow_id: other_user.id)
+      relationship.destroy if relationship
+    end
+
+    def following?(other_user)
+      followings.include?(other_user)
+    end
+
   with_options presence: true do
     validates :nickname
   end
