@@ -3,7 +3,9 @@
 
   <div class="viedo-show">
      <%= video_tag @post.video.to_s, :controls => true, autobuffer: true, id:"video"%>
+     <%= link_to  user_path(@post.user.id) do %>
      <%= @post.user.nickname %>
+        <% end %>
      <div id="show_like_<%= @post.id %>">
         <%= render 'likes/like', post: @post %>
     </div>
