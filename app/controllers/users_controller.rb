@@ -1,29 +1,18 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :followings, :followers]
 
   def followings
-  @users = @user.followings.all
-  respond_to do |format|
-    format.js
-  end
-end
+     @user = User.find(params[:id])
+     @users = @user.followings.all
+   end
 
-def followers
-  @users = @user.followers.all
-  respond_to do |format|
-    format.js
-  end
-end
-
-private
-
-  def set_user
+   def followers
+     @user = User.find(params[:id])
+     @users = @user.followers.all
+   end
+   
+  def show
     @user = User.find(params[:id])
-  end
-
-  def move_to_index
-    set_user
-    unless current_user.id == @user.id
-    end
+    @relationship = current_user.relationships.find_by(follow_id: @user.id)
+    @set_relationship = current_user.relationships.new
   end
 end

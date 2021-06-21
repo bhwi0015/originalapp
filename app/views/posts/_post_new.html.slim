@@ -1,0 +1,18 @@
+- unless @posts.length == 0
+  - @posts.each do |post|
+    .posts
+      .post-index
+        ul
+          |  <div class="post-title"">
+          li
+            = link_to post.title, post_path(post)
+    li
+      = image_tag post.image, class:"post-image"
+    .post-nickname
+
+    li
+      = post.user.nickname
+    |  <div id="index_like_
+    = post.id
+    | ">
+    = render 'likes/like', post: post

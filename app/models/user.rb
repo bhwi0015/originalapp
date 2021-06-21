@@ -14,19 +14,20 @@ class User < ApplicationRecord
   has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id', dependent: :destroy
   has_many :followers, through: :reverse_of_relationships, source: :user
 
-    def follow(other_user)
-      relationships.find_or_create_by(follow_id: other_user.id) unless self == other_user
-    end
+  def following?(other_user)
+    self.followings.include?(other_user)
+  end
 
-    def unfollow(other_user)
-      relationship = relationships.find_by(follow_id: other_user.id)
-      relationship.destroy if relationship
+  def follow(other_user)
+    unless self == other_user
+      self.relationships.find_or_create_by(follow_id: other_user.id)
     end
+  end
 
-    def following?(other_user)
-      followings.include?(other_user)
-    end
-
+  def unfollow(other_user)
+    relationship = self.relationships.find_by(follow_id: other_user.id)
+    relationship.destroy if relationship
+  end
   with_options presence: true do
     validates :nickname
   end
