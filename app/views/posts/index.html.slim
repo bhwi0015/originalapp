@@ -1,0 +1,7 @@
+.posts-main
+  .posts-main-list
+    = link_to "ログアウト", destroy_user_session_path, method: :delete, class: :logout
+    #item_index_new
+      = render 'post_new', post: @post
+    .create-btn
+      = link_to "動画を投稿してみよう",  new_post_path, class:"post-new"
