@@ -38,7 +38,7 @@ _ has_many :comments
 - belongs_to :user
 - belongs_to :post
 
-# liles テーブル
+# likes テーブル
 
 | Column      | Type       | Options     |
 | ----------- | ---------- | ----------- |
@@ -47,3 +47,12 @@ _ has_many :comments
 
 - belongs_to :user
 - belongs_to :post
+
+# rerlationships テーブル
+
+| Column      | Type       | Options     |
+| ----------- | ---------- | ----------- |
+| follow      | references | null: false |
+| user        | references | null: false |
+
+- belongs_to :user
