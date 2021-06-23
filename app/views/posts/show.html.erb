@@ -1,0 +1,34 @@
+
+<div class="show-post">
+
+  <div class="viedo-show">
+     <%= video_tag @post.video.to_s, :controls => true, autobuffer: true, id:"video"%>
+     <%= link_to  user_path(@post.user.id) do %>
+     <%= @post.user.nickname %>
+        <% end %>
+     <div id="show_like_<%= @post.id %>">
+        <%= render 'likes/like', post: @post %>
+    </div>
+   <div class="show-description">
+       <%= @post.description %>
+   </div>
+       <% if user_signed_in? && current_user.id == @post.user_id %>
+   <div class="post__manage">
+     <%= link_to "編集する", edit_post_path(@post.id), class:"post_btn" %>
+     <%= link_to "削除する", post_path(@post.id), method: :delete, class:"post_btn" %>
+   </div>
+       <% end %>
+  </div>
+
+  <div class="post-comments" >
+       <h3>Only Good Comment</h3>
+
+          <%= render partial: 'comments/form', locals: { comment: @comment, post: @post }  %>
+        <h3>comments</h3>
+
+             <div id="comments_area">
+                 <%= render partial: 'comments/index', locals: { comments: @comments } %>
+             </div>
+      </div>
+</div>
+<%=link_to 'トップページへ戻る', root_path, class:"show-back-btn" %>
