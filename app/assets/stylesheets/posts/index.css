@@ -1,7 +1,9 @@
 
 .posts {
+  padding: 150px;
   border-bottom: 1px solid rgb(171, 167, 168);
 }
+
 .post-title {
   color: black;
   font-size: 40px;
