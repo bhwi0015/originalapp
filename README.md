@@ -57,8 +57,8 @@ _ has_many :comments
 
 - belongs_to :user
 
-# アプリケーション名
-『Study Output』
+# HealthYourself
+
 
 # アプリケーション概要
 ヘルスケアアプリケーションです。
