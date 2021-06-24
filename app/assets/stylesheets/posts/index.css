@@ -6,6 +6,7 @@
   color: black;
   font-size: 40px;
 }
+
 .post-index {
 width: 45vw;
 margin: 0 auto;
@@ -42,5 +43,5 @@ font-size:40px;
   top: 0;
   width: 100vw;
   background-color: rgb(119, 117, 118);
-  opacity:0.8;
+  opacity: 0.8;
 }
