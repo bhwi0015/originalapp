@@ -1,31 +1,33 @@
+<%= render 'devise/shared/header' %>
 <div class="new-post">
-<h1>投稿画面</h1>
+<h1>動画を投稿しよう</h1>
 <%= form_with model: @post, local: true do |f| %>
 
   <div class="post-field">
-   <%= f.label :video, "動画選択", class:"select-btn"%>
+   <%= f.label :video, "動画選択", class:"btn select-btn"%>
    <%= f.file_field :video, :accept => 'video/*', class:"hidden" %>
    <div id="upload-video"></div>
   </div>
   <div class="post-field">
-   <%= f.label :image, "サムネ選択", class:"select-btn" %>
+   <%= f.label :image, "サムネ選択", class:"btn select-btn" %>
 
    <%= f.file_field :image, class:"hidden" %>
    <div id="image-list"></div>
   </div>
 
   <div class="post-field">
-   <%= f.label :title, "動画のタイトル" %><br>
+   <%= f.label :title, "タイトル" %><br>
    <%= f.text_area :title, class:"submit-title"%>
   </div>
   <div class="post-field">
-    <%= f.label :description, "動画の概要" %><br>
+    <%= f.label :description, "概要" %><br>
     <%= f.text_area :description, class:"submit-description"%>
    </div>
     <%= f.hidden_field :user_id, :value => current_user.id %>
  <div class="post-field">
+
    <%= f.submit "作成する" ,class:"submit-video" %>
-   <%=link_to 'トップページへ戻る', root_path, class:"back-btn" %>
+   <%=link_to 'トップページへ戻る', root_path, class:" btn back-btn" %>
  </div>
 <% end %>
 </div>

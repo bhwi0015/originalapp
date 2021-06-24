@@ -1,9 +1,8 @@
 <%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
-<%= link_to '新規登録はこちら', new_user_registration_path, class: "session-sign-up" %>
+<%= link_to '新規登録はこちら', new_user_registration_path, class:" btn session-sign-up" %>
 
   <div class='form-header'>
     <h2>アプリケーション名</h2>
-    <p class="login_session">ログイン</p>
   </div>
 
   <div class="form-group">
@@ -19,7 +18,7 @@
     <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
     <p class='info-text'></p>
   <div class='register-btn'>
-    <%= f.submit "ログイン" ,class:"register-login"%>
+    <%= f.submit "ログイン" ,class:"btn register-login"%>
    </div>
    </div>
 <% end %>

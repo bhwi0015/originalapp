@@ -3,14 +3,15 @@
 .registration-main {
   width: 100vw;
   height: 100vh;
-  color: white;
-  justify-content: center;
-  background-color: black;
-  background-size: cover;
-}
 
+}
+.btn {
+  color: white;
+}
 .form-header {
-  text-align: center;
+padding-bottom: 180px;
+font-size: 25px
+
 }
 
 .form-group {
@@ -60,49 +61,50 @@
   width: 100%;
   background: #ea352d;
   border: 1px solid #ea352d;
-  color: #fff;
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
-}
-
-
-.login-flash-message {
-  text-align: center;
-  color: red;
-}
-
-.login_session {
-  padding-bottom: 180px;
-}
-
-.login {
-  color: white;
-  float: right;
-  padding: 20px;
-  margin: 10px;
-  background-color: rgb(37, 236, 218);
   opacity: 0.8;
   transition: all 0.3s;
   border-radius: 40px
 }
 
- .login:hover {
+.register-red-btn:hover{
+  opacity: 1;
+}
+
+.log {
+  float: right;
+  padding: 20px;
+  margin: 10px;
+  background-color: rgb(38, 46, 230);;
+  opacity: 0.8;
+  transition: all 0.3s;
+  border-radius: 40px
+}
+
+ .log:hover {
   opacity: 1;
 }
 
 .register-login {
   text-align: center;
   width: 100%;
-  background: rgb(37, 236, 218);
-  color: #fff;
+  background: rgb(38, 46, 230);
+  border: 1px solid rgb(38, 46, 230);;
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.3s;
+  border-radius: 40px
+}
+
+.register-login:hover {
+  opacity: 1;
 }
 
 .sign-up {
-  color: white;
   padding: 30px 200px;
   background-color: rgb(184, 46, 46);
   transition: all 0.3s;
@@ -115,7 +117,6 @@
 }
 
 .session-sign-up {
-  color: white;
   float: right;
   padding: 20px;
   margin: 10px;

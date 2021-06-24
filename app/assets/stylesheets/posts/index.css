@@ -1,21 +1,18 @@
-.posts-main {
-background-color: black;
-}
 
 .posts {
   border-bottom: 1px solid rgb(171, 167, 168);
 }
-
+.post-title {
+  color: black;
+  font-size: 40px;
+}
 .post-index {
 width: 45vw;
 margin: 0 auto;
 }
 
-.post-index li{
-padding: 10px 0;
-}
 .post-title a{
-    color: #fff;
+  color: black;
 font-size:40px;
 }
 
@@ -25,18 +22,25 @@ font-size:40px;
 }
 
 .post-nickname {
-  color: #fff;
+  color: black;
   font-size: 20px;
 }
 
 .post-new {
-  font-weight: bold;
-color: blue;
-position: fixed;
-top: 105px;
-left: 55px;
+  float: right;
+  margin: 30px;
+
 }
 
-.logout {
-color: #fff;
+ .header-left {
+   float: left;
+ }
+
+.post-header {
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: rgb(119, 117, 118);
+  opacity:0.8;
 }
