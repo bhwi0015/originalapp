@@ -68,12 +68,12 @@ _ has_many :comments
 
 # URL
 https://whispering-gorge-16101.herokuapp.com
--ID/Pass
-ID: yy.bhwi
-Pass: 1015
--テスト用アカウント
-メールアドレス: s100.hanai.yusuke@gmail.com
-パスワード: yy1015
+- ID/Pass
+- ID: yy.bhwi
+- Pass: 1015
+- テスト用アカウント
+- メールアドレス: s100.hanai.yusuke@gmail.com
+- パスワード: yy1015
 
 
 ## ユーザー管理機能
