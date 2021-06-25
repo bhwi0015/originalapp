@@ -1,10 +1,9 @@
 <div class="user-profile">
- <h2> フォロワー </h2>
+ <h1> フォロワー </h1>
 
    <% @users.each do |user| %>
 
    <%= link_to "username :  #{user.nickname}", user_path(user.id) %>
  <% end %>
-
-      <%=link_to 'トップページへ戻る', root_path, class:"btn back-btn" %>
-</div>
+    </div>
+    <%=link_to 'トップページへ戻る', root_path, class:"btn back-btn" %>
