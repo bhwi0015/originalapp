@@ -1,0 +1,9 @@
+.user-profile {
+    text-align: center;
+    font-size: 25px;
+    padding: 30px;
+}
+
+.user-profile h1{
+  border-bottom: 1px solid black;
+}

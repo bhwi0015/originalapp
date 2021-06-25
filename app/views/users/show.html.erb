@@ -1,0 +1,12 @@
+<div class="user-profile">
+  <h1>プロフィール</h1>
+
+    <%= @user.nickname %>
+
+    <%= link_to "フォロー: #{@user.followings.count} / ", followings_user_path(@user.id) %>
+
+    <%= link_to "フォロワー: #{@user.followers.count}", followers_user_path(@user.id) %>
+
+    <%= render 'relationships/follow_form', user: @user %>
+      </div>
+      <%=link_to 'トップページへ戻る', root_path, class:"btn back-btn" %>
