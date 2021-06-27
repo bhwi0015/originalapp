@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
-    before_action :set_post, except: [:index, :create, :new]
+  before_action :set_post, except: [:index, :create, :new]
 
   def index
-    @posts = Post.all.order("created_at DESC")
+    @posts = Post.all.order('created_at DESC')
   end
 
   def new
@@ -32,13 +32,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
-     if @post.destroy
-       redirect_to root_path
-     else
-       redirect_to root_path
-     end
-   end
-
+    redirect_to root_path if @post.destroy
+  end
 
   private
 

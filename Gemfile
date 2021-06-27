@@ -40,6 +40,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'rubocop', require: false
 end
 
 group :test do
@@ -59,4 +60,4 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'jquery-rails'
 gem "refile", require: "refile/rails", github: "manfe/refile"
 gem "refile-mini_magick"
-gem 'slim-rails'
+gem "aws-sdk-s3", require: false

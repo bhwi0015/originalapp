@@ -5,7 +5,7 @@
              <li><%= comment.user.nickname %></li>
                   <li><%= comment.content %></li>
 
-                    <%= comment.created_at.strftime("%Y/%m/%d %H:%M:%S") %>
+                    <li><%= comment.created_at.strftime("%Y/%m/%d %H:%M:%S") %></li>
                     <% if comment.user == current_user %>
                         <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true do %>
                           <i class="fas fa-trash" style="color: black;"></i>
