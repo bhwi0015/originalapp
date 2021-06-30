@@ -81,7 +81,8 @@ https://whispering-gorge-16101.herokuapp.com
 
 ## 動画投稿
 ヘッダーの右上の投稿ボタンをクリックすると動画の投稿をすることができます。動画の投稿に必須なのは動画、サムネ画像、タイトル、動画の内容です。それを全て入力すると動画を投稿することができます。
-https://user-images.githubusercontent.com/64278026/123900000-365ea100-d9a3-11eb-9199-a048d2132ecf.gif
+![toukou](https://user-images.githubusercontent.com/64278026/123900000-365ea100-d9a3-11eb-9199-a048d2132ecf.gif)
+
 
 ## 動画一覧
 投稿した動画はindexページに表示されます。
