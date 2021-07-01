@@ -4,6 +4,7 @@ background-size: cover;
 background-position: center;
 height: 100vh;
 margin: 0;
+padding-top: 30px;
 }
 
 .home-heading {
@@ -12,4 +13,12 @@ text-align: center;
 
 .home-heading h1{
   padding: 50px;
+}
+
+.logo {
+position: absolute;
+top: 10px;
+left: 380px;
+width:100px;
+height: 90px;
 }
