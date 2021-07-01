@@ -23,10 +23,18 @@
 body {
   font-size: 14px;
   margin: 0 auto;
-
   font-family: 'Hiragino Maru Gothic ProN';
 }
 h1,h2,h3,h4,h5,h6,p {
   padding: 10px 0;
   margin: 0;
+}
+.btn {
+opacity: 0.8;
+transition: all 0.3s;
+border-radius: 40px;
+}
+
+ .btn:hover {
+  opacity: 1;
 }

@@ -1,9 +1,12 @@
 <div class="post-header">
-<div >
-  <h1 class='header-left'>HealthYourself</h1>
-</div>
-<div class="posts-main">
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn log out" %>
-    <%= link_to "動画を投稿してみよう",  new_post_path, class:"btn post-new" %>
-</div>
+  <div class="posts-main">
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn logout" %>
+      <%= link_to "動画を投稿してみよう",  new_post_path, class:"btn post-new" %>
+      <i class="fas fa-video"></i>
+  </div>
+  <div class='form-header'>
+    <h1>HealthYourself</h1>
+      <%= image_tag 'Helth-removebg-preview.png', class:'logo' %>
+  </div>
+
 </div>
