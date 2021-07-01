@@ -1,5 +1,6 @@
+<div class="home">
 <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
-    <%= link_to 'ログインはこちら', new_user_session_path, class: "login btn" %>
+    <%= link_to 'ログインはこちら', new_user_session_path, class: "log in btn" %>
 
   <div class='form-header'>
     <h1>HealthYourself</h1>
@@ -27,3 +28,5 @@
    </div>
    </div>
 <% end %>
+
+</div>
