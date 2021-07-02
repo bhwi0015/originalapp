@@ -1,5 +1,10 @@
 
 <%= render 'devise/shared/header' %>
-<div class="posts-main-list">
-       <%= render 'post_new', post: @post %>
+<div class="post-main">
+    <div class="side">
+      <%= render 'devise/shared/side' %>
+    </div>
+      <div class="post-main-list">
+         <%= render 'post_new', post: @post %>
       </div>
+  </div>

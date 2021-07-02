@@ -1,9 +1,25 @@
-.post-main-list {
+.post-main {
+display: flex;
+width: 100vw;
+height: 100vh;
+}
 
+.side {
+  width: 15vw;
+  height: 100vh;
+  position: fixed;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 8;
+}
+
+.post-main-list {
+  width: 100vw;
 }
 .posts {
-  padding-top: 150px;
-  border-bottom: 1px solid black;
+  padding: 150px 0 0 30vw;
+  border-bottom: 1px solid green;
+
 }
 
 .post-title {
@@ -12,7 +28,6 @@
 }
 
 .post-index {
-width: 45vw;
 margin: 0 auto;
 }
 
@@ -23,7 +38,7 @@ font-size:30px;
 background-color: black;
 opacity: 0.8;
 transition: all 0.3s;
-border-radius: 40px;
+border-radius: 10px;
 cursor: pointer;
 }
 
@@ -35,6 +50,9 @@ cursor: pointer;
 .post-nickname {
   color: blue;
   font-size: 20px;
+}
+.post-image {
+  border-radius: 10px;
 }
 
 .post-new {
@@ -64,10 +82,11 @@ padding-top: 30px;
   top: 0;
   width: 100vw;
   opacity: 0.8;
-  z-index: 9;
+  z-index: 8;
 }
 
 .post-header-name {
 color: white;
 font-size: 25px;
+padding-left: 20vw;
 }
