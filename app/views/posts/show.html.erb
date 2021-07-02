@@ -1,20 +1,29 @@
 <%= render 'devise/shared/header' %>
+<div class="post-main">
+    <div class="side">
+      <%= render 'devise/shared/side' %>
+
+ </div>
+ <div class="show-posts">
 
     <div class="viedo-show">
      <%= video_tag @post.video.to_s, :controls => true, autobuffer: true, id:"video"%>
+
      </div>
+
      <div class="show-post">
-     <div class="show-nickname">
-      <%= link_to  user_path(@post.user.id) do %>
-      <%= @post.user.nickname %>
-        <% end %>
+       <div class="btn show-nickname">
+        <%= link_to user_path(@post.user.id) do %>
+        <%= @post.user.nickname %>
+          <% end %>
+       </div>
+       <div id="show_like_<%= @post.id %>">
+          <%= render 'likes/like', post: @post %>
+      </div>
+     <div class="show-description">
+         <%= @post.description %>
      </div>
-     <div id="show_like_<%= @post.id %>">
-        <%= render 'likes/like', post: @post %>
-    </div>
-   <div class="show-description">
-       <%= @post.description %>
-   </div>
+
        <% if user_signed_in? && current_user.id == @post.user_id %>
    <div class="post__manage">
      <%= link_to "編集する", edit_post_path(@post.id), class:"btn post-btn" %>
@@ -34,4 +43,6 @@
                  <%= render partial: 'comments/index', locals: { comments: @comments } %>
              </div>
       </div>
+   </div>
+   </div>
 </div>

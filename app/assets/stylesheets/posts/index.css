@@ -4,22 +4,14 @@ width: 100vw;
 height: 100vh;
 }
 
-.side {
-  width: 15vw;
-  height: 100vh;
-  position: fixed;
-  background-color: black;
-  opacity: 0.8;
-  z-index: 8;
-}
 
 .post-main-list {
   width: 100vw;
 }
+
 .posts {
   padding: 150px 0 0 30vw;
   border-bottom: 1px solid green;
-
 }
 
 .post-title {
@@ -53,40 +45,4 @@ cursor: pointer;
 }
 .post-image {
   border-radius: 10px;
-}
-
-.post-new {
-  padding: 20px;
-  background-color: orange;
-  float: right;
-  margin: 10px;
-}
-
-.logout {
-  float: right;
-  padding: 20px;
-  margin: 10px;
-  background-color: green;
-}
-
-.fa-video {
-  font-size: 60px;
-  float: right;
-  margin-top: 12px;
-  color: orange;
-}
-.post-header {
-  background-color: black;
-padding-top: 30px;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  opacity: 0.8;
-  z-index: 8;
-}
-
-.post-header-name {
-color: white;
-font-size: 25px;
-padding-left: 20vw;
 }
