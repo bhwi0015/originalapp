@@ -14,12 +14,3 @@ text-align: center;
 .home-heading h1{
   padding: 50px;
 }
-
-.logo {
-position: absolute;
-top: 7px;
-left: 4vw;
-width:100px;
-height: 90px;
-z-index: 10;
-}

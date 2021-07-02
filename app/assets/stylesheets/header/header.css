@@ -1,0 +1,36 @@
+
+.post-new {
+  padding: 20px;
+  background-color: orange;
+  float: right;
+  margin: 10px;
+}
+
+.logout {
+  float: right;
+  padding: 20px;
+  margin: 10px;
+  background-color: green;
+}
+
+.fa-video {
+  font-size: 60px;
+  float: right;
+  margin-top: 12px;
+  color: orange;
+}
+.post-header {
+  background-color: black;
+padding-top: 35px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  opacity: 0.8;
+  z-index: 8;
+}
+
+.post-header-name {
+color: white;
+font-size: 25px;
+padding-left: 20vw;
+}
