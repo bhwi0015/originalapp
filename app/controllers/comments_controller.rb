@@ -1,22 +1,24 @@
 class CommentsController < ApplicationController
   def create
-    @post = Post.find(params[:post_id])
-    @comment = @post.comments.build(comment_params)
-    @comment.user_id = current_user.id
-    @comment.save
-    render :index
-  end
+   @post = Post.find(params[:post_id])
+   @comment = current_user.comments.new(comment_params)
+   @comment.post_id = @post.id
+   if @comment.save
+     render :post_comments
+   else
+     render 'posts/show'
+   end
+ end
 
-  def destroy
-    @comment = Comment.find(params[:id])
-    @comment.destroy
+ def destroy
+   Comment.find_by(id: params[:id], post_id: params[:post_id]).destroy
+   @post = Post.find(params[:post_id])
+   render :post_comments
+ end
+   private
 
-    render :index
-  end
+   def comment_params
+     params.require(:comment).permit(:content)
+   end
 
-  private
-
-  def comment_params
-    params.require(:comment).permit(:content, :post_id, :user_id)
-  end
-end
+ end

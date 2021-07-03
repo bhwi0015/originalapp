@@ -20,7 +20,6 @@ class PostsController < ApplicationController
 
   def show
     @comment = Comment.new
-    @comments = @post.comments.order(created_at: :DESC)
   end
 
   def update

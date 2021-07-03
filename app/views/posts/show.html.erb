@@ -33,16 +33,13 @@
        </div>
 
 
-  <div class="post-comments" >
        <h3>Only Good Comment</h3>
-
-          <%= render partial: 'comments/form', locals: { comment: @comment, post: @post }  %>
-        <h3>comments</h3>
-
-             <div id="comments_area">
-                 <%= render partial: 'comments/index', locals: { comments: @comments } %>
-             </div>
-      </div>
+       <div class="new-comment">
+  <%= render 'comments/form', post: @post, comment: @comment %>
+</div>
+<div id="comments_area">
+  <%= render 'comments/post_comments', post: @post %>
+</div>
    </div>
    </div>
 </div>
