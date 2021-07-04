@@ -1,0 +1,6 @@
+.new-comment h3 {
+  color: green;
+  font-size: 50px;
+  border-bottom: 1px solid green;
+  margin: 10px 0;
+}
