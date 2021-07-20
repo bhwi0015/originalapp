@@ -3,7 +3,7 @@
 
    <% @users.each do |user| %>
 
-   <%= link_to "username :  #{user.nickname}", user_path(user.id) %>
+   <%= link_to "username :  #{user.nickname}", user_path(user.id), id:"users" %>
  <% end %>
     </div>
     <%=link_to 'トップページへ戻る', root_path, class:"btn back-btn" %>

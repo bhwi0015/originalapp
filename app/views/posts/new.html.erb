@@ -1,4 +1,7 @@
 <%= render 'devise/shared/header' %>
+<div class="side">
+      <%= render 'devise/shared/side' %>
+    </div>
 <div class="new-post">
 <h1>動画を投稿しよう</h1>
 <%= form_with model: @post, local: true do |f| %>

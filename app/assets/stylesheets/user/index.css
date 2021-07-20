@@ -7,3 +7,7 @@
 .user-profile h1{
   border-bottom: 1px solid black;
 }
+
+#users {
+  display: block;
+}
